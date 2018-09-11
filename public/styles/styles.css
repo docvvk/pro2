@@ -1,3 +1,28 @@
+/* html, body {
+  font-size: 20px;
+} */
+
+
 .list-group-item {
   line-height: 2.5;
+}
+
+.recent-transaction, .new-transaction, .net-worth {
+  padding: 20px;
+  border: 1px solid black;
+  margin: -.5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .recent-transaction.row {
+      background-color: lightblue;
+      position: relative;
+      top: 40px;
+  }
+  .net-worth {
+    background-color: lightblue;
+    position: relative;
+    top: 40px;
+
+  }
 }

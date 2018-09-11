@@ -1,15 +1,15 @@
 $("#submit").on("click", function(event) {
   event.preventDefault();
 
-  // Make a newChirp object
+  // Make a newTransaction object
   var newTransaction = {
-    author: $("#author").val().trim(),
-    type: $("#type").val().trim(),
-    from: $("#from").val().trim(),
+    name: $("#name").val().trim(),
+    type: $("#type").val(),
+    from: $("#from").val(),
     amount: $("#amount").val().trim(),
     category: $("#category").val().trim(),
     notes: $("#notes").val().trim(),
-    created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+    // created_at: moment().format("YYYY-MM-DD HH:mm:ss")
   };
 
   console.log(newTransaction);
@@ -22,14 +22,15 @@ $("#submit").on("click", function(event) {
       var row = $("<div>");
       row.addClass("transaction");
 
-      row.append("<p>" + newTransaction.author + " Transaction: </p>");
-      row.append("<p>" + newTransaction.type + "</p>");
-      row.append("<p>" + newTransaction.from + "</p>");
-      row.append("<p>" + newTransaction.amount + "</p>");
-      row.append("<p>" + newTransaction.category + "</p>");
-      row.append("<p>" + newTransaction.notes + "</p>");
+      row.append("<h5> TRANSACTION DETAILS: </h5>");
+      row.append("<h5> Name: " + newTransaction.name + "</h5>");
+      row.append("<h5> Type: " + newTransaction.type + "</h5>");
+      row.append("<h5> From: " + newTransaction.from + "</h5>");
+      row.append("<h5> Amount: " + newTransaction.amount + "</h5>");
+      row.append("<h5> Category: " + newTransaction.category + "</h5>");
+      row.append("<h5> Notes: " + newTransaction.notes + "</h5>");
 
-      row.append("<p>At " + moment(newTransaction.created_at).format("h:mma on dddd") + "</p>");
+      row.append("<h5> Time:  " + moment(newTransaction.created_at).format("h:mma DD/MMM/YYYY") + "</h5><hr>");
 
       $("#transaction-area").prepend(row);
 
