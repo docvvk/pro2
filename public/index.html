@@ -77,7 +77,6 @@
                               <option class="opt" value="withdrawl">Withdrawal</option>
                             </select>
                           </form>
-                        <!-- <input type="text" class="form-control" id="type" placeholder="Deposit or Withdrawl"> -->
                       </div>
                       <div class="form-group">
                         <label for="account">ACCOUNT TYPE</label>
@@ -88,7 +87,6 @@
                               <option class="opt" value="gic">GIC</option>
                             </select>
                           </form>
-                        <!-- <input type="text" class="form-control" id="from" placeholder="CHQ or SAV"> -->
                       </div>
                       <div class="form-group">
                         <label for="withdraw">AMOUNT</label>
@@ -96,7 +94,20 @@
                       </div>
                       <div class="form-group">
                         <label for="withdraw">CATEGORY</label>
-                        <input type="text" class="form-control" id="category" placeholder="Enter category">
+                        <form action="submit" >
+                            <select name="category" id="category" class="form-control">
+                              <option class="opt" value="food">Food</option>
+                              <option class="opt" value="entertainment">Entertainment</option>
+                              <option class="opt" value="education">Education</option>
+                              <option class="opt" value="mortgage/rent">Mortgage/Rent</option>
+                              <option class="opt" value="bills">Utility bills (cable, cell, electricity, water, etc.)</option>
+                              <option class="opt" value="vehicle">Vehicle</option>
+                              <option class="opt" value="health">Health expences</option>
+                              <option class="opt" value="pthers">Others</option>
+
+                            </select>
+                          </form>
+                        <!-- <input type="text" class="form-control" id="category" placeholder="Enter category"> -->
                       </div>
                       <div class="form-group">
                         <label for="withdraw">NOTES</label>
