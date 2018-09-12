@@ -3,12 +3,20 @@ $("#submit").on("click", function(event) {
 
   // Make a newTransaction object
   var newTransaction = {
-    name: $("#name").val().trim(),
+    name: $("#name")
+      .val()
+      .trim(),
     type: $("#type").val(),
     from: $("#from").val(),
-    amount: $("#amount").val().trim(),
-    category: $("#category").val().trim(),
-    notes: $("#notes").val().trim(),
+    amount: $("#amount")
+      .val()
+      .trim(),
+    category: $("#category")
+      .val()
+      .trim(),
+    notes: $("#notes")
+      .val()
+      .trim()
     // created_at: moment().format("YYYY-MM-DD HH:mm:ss")
   };
 
@@ -18,7 +26,6 @@ $("#submit").on("click", function(event) {
   $.post("/api/new", newTransaction)
     // On success, run the following code
     .then(function() {
-
       var row = $("<div>");
       row.addClass("transaction");
 
@@ -30,10 +37,13 @@ $("#submit").on("click", function(event) {
       row.append("<h5> Category: " + newTransaction.category + "</h5>");
       row.append("<h5> Notes: " + newTransaction.notes + "</h5>");
 
-      row.append("<h5> Time:  " + moment(newTransaction.created_at).format("h:mma DD/MMM/YYYY") + "</h5><hr>");
+      row.append(
+        "<h5> Time:  " +
+          moment(newTransaction.created_at).format("h:mma DD/MMM/YYYY") +
+          "</h5><hr>"
+      );
 
       $("#transaction-area").prepend(row);
-
     });
 
   // Empty each input box by replacing the value with an empty string
@@ -46,26 +56,23 @@ $("#submit").on("click", function(event) {
 });
 
 $.get("/api/all", function(data) {
-
   if (data.length !== 0) {
-
     for (var i = 0; i < data.length; i++) {
-
       var row = $("<div>");
       row.addClass("transaction");
 
-      row.append("<p>" + data[i].author + " transaction.. </p>");
-      row.append("<p>" + data[i].type + "</p>");
-      row.append("<p>" + data[i].from + "</p>");
-      row.append("<p>" + data[i].amount + "</p>");
-      row.append("<p>" + data[i].category + "</p>");
-      row.append("<p>" + data[i].notes + "</p>");
-      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-
+      row.append("<h5> Name: " + data[i].name + "</h5>");
+      row.append("<h5> Type: " + data[i].type + "</h5>");
+      row.append("<h5> From: " + data[i].from + "</h5>");
+      row.append("<h5> Amount: " + data[i].amount + "</h5>");
+      row.append("<h5> Category: " + data[i].category + "</h5>");
+      row.append("<h5> Notes: " + data[i].notes + "</h5>");
+      row.append(
+        "<h5> Time: " +
+          moment(data[i].created_at).format("h:mma DD/MMM/YYYY") +
+          "</h5><hr>"
+      );
       $("#transaction-area").prepend(row);
-
     }
-
   }
-
 });
