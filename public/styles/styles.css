@@ -13,6 +13,10 @@
   margin: -.5px;
 }
 
+.edit-transaction {
+  padding-top: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .recent-transaction.row {
       background-color: lightblue;
