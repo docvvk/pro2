@@ -1,17 +1,11 @@
-var Sequelize = require("sequelize");
-
-var sequelize = require("../config/connection.js");
-
-var Transaction = sequelize.define("transaction", {
-  name: Sequelize.STRING,
-  type: Sequelize.STRING,
-  from: Sequelize.STRING,
-  amount: Sequelize.STRING,
-  category: Sequelize.STRING,
-  notes: Sequelize.STRING
-  // created_at: Sequelize.DATE
-});
-
-Transaction.sync();
-
-module.exports = Transaction;
+module.exports = function(sequelize, DataTypes) {
+  var Transaction = sequelize.define("Transaction", {
+    name: DataTypes.STRING,
+    type: DataTypes.STRING,
+    from: DataTypes.STRING,
+    amount: DataTypes.STRING,
+    category: DataTypes.STRING,
+    notes: DataTypes.STRING
+  });
+  return Transaction;
+};
