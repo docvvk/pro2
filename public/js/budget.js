@@ -77,4 +77,17 @@ $.get("/api/all", function(data) {
 }
 });
 
+$(".catWith").hide();
+
+$("#type").change(function(event){
+  console.log($("#type").val());
+  if($("#type").val() === "withdrawl"){
+    $(".catWith").show();
+    $(".catDep").hide();
+  }else{
+    $(".catWith").hide();
+    $(".catDep").show();
+  }
+})
+
 
