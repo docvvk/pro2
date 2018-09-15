@@ -22,7 +22,7 @@ module.exports = function(app) {
     db.Transaction.update(req.body,
       {
         where: {
-          name: req.params.id
+          id: req.params.id
         }
       })
       .then(function(dbPost) {

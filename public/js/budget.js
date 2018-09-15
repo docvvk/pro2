@@ -83,6 +83,8 @@ $.get("/api/all", function(data) {
     var x = parseInt($(this).attr("data-id")) - 1;
     console.log(x);
 
+    $(".modal-body").attr("actId", x+1);
+
 
     $("#u-name").val(data[x].name);
     $("#u-type").val(data[x].type);
@@ -135,14 +137,16 @@ $("#save").on("click", function(event) {
   };
 
   console.log(uTransaction);
+  var id = $(".modal-body").attr("actId");
 
   $.ajax({
     method: "PUT",
-    url: "/api/new",
+    url: "/api/new/" + id,
     data: uTransaction
   })
     .then(function() {
       console.log(uTransaction);
+      location.reload();
     });
 })
 
@@ -158,3 +162,29 @@ $("#type").change(function(event){
     $(".catDep").show();
   }
 })
+
+$.get("/api/dep", function(depo){
+  $.get("/api/with", function(withd){
+    var types = ["checking", "saving", "gic"]
+    var names = ["CHQ", "SAV", "GIC"]
+    console.log(depo, withd)
+    for(var i = 0; i < types.length; i++){
+      var amount = sumDat(depo, types[i]) - sumDat(withd, types[i]);
+      console.log(amount)
+      var row = $(`<h3> ${names[i]}       ${amount}</h3>`);
+      $(".net-worth").append(row)
+    }
+  })
+})
+
+function sumDat(data, account){
+  var amount = 0;
+  
+  for(var i = 0; i < data.length; i++){
+    if(data[i].from === account){
+      amount += parseInt(data[i].amount);
+    }
+  }
+
+  return amount;
+}
