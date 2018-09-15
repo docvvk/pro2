@@ -15,7 +15,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -71,7 +71,7 @@
                         <label for="name">NAME</label>
                         <input type="text" class="form-control" id="name" placeholder="firstname lastname">
                       </div>
-                  
+
                       <div class="form-group">
                         <label for="transaction">TRANSACTION TYPE</label>
                         <form action="submit" >
@@ -120,7 +120,7 @@
                         <label for="withdraw">NOTES</label>
                         <input type="text" class="form-control" id="notes" placeholder="Any notes">
                       </div>
-                      <button type="button" id="submit" class="btn btn-primary pull-left">SUBMIT</button>          
+                      <button type="button" id="submit" class="btn btn-primary pull-left">SUBMIT</button>
                   </form>
               </div>
 
@@ -131,7 +131,7 @@
 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
     Edit
   </button> -->
-  
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -143,19 +143,19 @@
           </button>
         </div>
         <div class="modal-body">
-          
+
 
             <div class="col-sm-12 edit-transaction">
                 <form class="p-2" action="submit">
                     <div class="form-group">
                       <label for="name">NAME</label>
-                      <input type="text" class="form-control" id="name" placeholder="firstname lastname">
+                      <input type="text" class="form-control" id="u-name" placeholder="firstname lastname">
                     </div>
-                
+
                     <div class="form-group">
                       <label for="transaction">TRANSACTION TYPE</label>
                       <form action="submit" >
-                          <select name="transaction" id="type" class="form-control">
+                          <select name="transaction" id="u-type" class="form-control">
                             <option class="opt" value="deposit">Deposit</option>
                             <option class="opt" value="withdrawl">Withdrawal</option>
                           </select>
@@ -164,7 +164,7 @@
                     <div class="form-group">
                       <label for="account">ACCOUNT TYPE</label>
                       <form action="submit" >
-                          <select name="account" id="from" class="form-control">
+                          <select name="account" id="u-from" class="form-control">
                             <option class="opt" value="checking">CHQ</option>
                             <option class="opt" value="saving">SAV</option>
                             <option class="opt" value="gic">GIC</option>
@@ -173,12 +173,12 @@
                     </div>
                     <div class="form-group">
                       <label for="withdraw">AMOUNT</label>
-                      <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+                      <input type="number" class="form-control" id="u-amount" placeholder="Enter amount">
                     </div>
                     <div class="form-group">
                       <label for="withdraw">CATEGORY</label>
                       <form action="submit" >
-                          <select name="category" id="category" class="form-control">
+                          <select name="category" id="u-category" class="form-control">
                             <option class="opt" value="food">Food</option>
                             <option class="opt" value="entertainment">Entertainment</option>
                             <option class="opt" value="education">Education</option>
@@ -194,7 +194,7 @@
                     </div>
                     <div class="form-group">
                       <label for="withdraw">NOTES</label>
-                      <input type="text" class="form-control" id="notes" placeholder="Any notes">
+                      <input type="text" class="form-control" id="u-notes" placeholder="Any notes">
                     </div>
                 </form>
             </div>
@@ -204,8 +204,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-info pull-left" data-dismiss="modal">Save</button>
-          <button type="button" class="btn btn-danger pull-right">Delete</button>
+          <button id="save" type="button" class="btn btn-info pull-left" data-dismiss="modal">Save</button>
+          <button id="delete" type="button" class="btn btn-danger pull-right">Delete</button>
         </div>
       </div>
     </div>
@@ -214,7 +214,7 @@
               </div>
 
               <div class="col-sm-4 net-worth">
-                  <h3 class="text-center">NET WORTH</h3>                
+                  <h3 class="text-center">NET WORTH</h3>
               </div>
           </div>
       </div>
