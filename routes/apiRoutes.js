@@ -18,6 +18,20 @@ module.exports = function(app) {
     });
   });
 
+  app.put("/api/new/:id", function(req, res) {
+    db.Transaction.update(req.body,
+      {
+        where: {
+          name: req.params.id
+        }
+      })
+      .then(function(dbPost) {
+        console.log(dbPost);
+        res.json(dbPost);
+      });
+  });
+
+
   app.get("/api/with", function(req, res) {
     db.Transaction.findAll({
       where: {
