@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>BudgetTracker</title>
+
+    <!-- Moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/./styles/styles.css">
+
+    <style>
+    </style>
+
+  </head>
+  <body>
+    <header>
+
+      <!---------------- NAVBAR ------------------>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Budget Tracker</a>
+          </div>
+          <ul class="nav navbar-nav">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if (user) { %>
+            <li><a href="/auth/logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+            <% } else { %>}
+            <li><a href="/auth/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <% } %>
+            <!-- <li><a href="/auth/profile"><span class="glyphicon glyphicon-log-in"></span> Profile</a></li> -->
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="jumbotron">
+          <div class="container">
+                <h3>Welcome to the Registration Page!</h3>
+                <p>Here you can login with any of the following accounts and save your data!</p>
+                <br>
+                <h3><a class="google-btn" href="/auth/google">Google+</a></h3>
+          </div>
+      </div>
+    </header>
+    </body>
+</html>
