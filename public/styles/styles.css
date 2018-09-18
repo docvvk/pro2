@@ -8,8 +8,8 @@
 }
 
 .recent-transaction, .new-transaction, .net-worth {
-  padding: 20px;
-  border: 1px solid black;
+  padding: 5px;
+  border: 1px outset #00a7a7;
   margin: -.5px;
 }
 
@@ -29,4 +29,47 @@
     top: 40px;
 
   }
+
+}
+
+#home {
+  margin-bottom: 25px;
+}
+
+#home .navbar {
+  background-color: #00a7a7;
+}
+
+#home .menu-item {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#home .opening {
+  font-family: Verdana;
+  color: #696969;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+
+#home .opening-text {
+  font-family: monospace;
+  color: #696969;
+  letter-spacing: 3px;
+}
+
+#home .column-heading {
+  color: #00a7a7;
+  font-family: Verdana;
+  letter-spacing: 2px;
+}
+
+#home .transaction-label {
+  font-family: Verdana;
+  color: #808080;
+}
+
+#home #name, #from, #type, #amount, #category, #notes{
+  border-color: #00a7a7
 }
