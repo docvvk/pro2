@@ -64,12 +64,16 @@
         <option>Daily</option>
     </select>
     
-
-    <div style="max-width: 500px;">
-        <canvas id="myChart" width="400" height="400"></canvas>
+    <div id="chartArea">
+        <div id="barChart" style="max-width: 500px; float: left;">
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+        <div style="max-width: 500px; float: left;">
+            <canvas id="pieChart" width="400" height="400"></canvas>
+        </div>
     </div>
 
-
+<!-- 
     <div class="btn-group">
             <button type="button" class="btn btn2 btn-dark" data-chart="off">Id</button>
             <button type="button" class="btn btn2 btn-dark" data-chart="off">Name</button>
@@ -100,7 +104,7 @@
             <option>Vehicle</option>
             <option>Health Expense</option>
             <option>Others</option>
-          </select>
+          </select> -->
     
   <script type="text/javascript" src="js/dataChart.js"></script>
   </body>
