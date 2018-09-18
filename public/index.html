@@ -26,28 +26,28 @@
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
   </head>
-  <body>
+  <body id="home">
 
       <!---------------- NAVBAR ------------------>
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Budget Tracker</a>
+            <a class="navbar-brand menu-item" href="#">Budget Tracker</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Dashboard</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Transactions<span class="caret"></span></a>
+            <li class="active menu-item"><a href="#" class="navbar">Dashboard</a></li>
+            <li class="dropdown"><a class="dropdown-toggle menu-item" data-toggle="dropdown" href="#">Transactions<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/dataChart">DataChart</a></li>
-                <li><a href="/transaction">Transaction</a></li>
+                <li><a href="/dataChart">Data Chart</a></li>
+                <li><a href="/transaction">Transactions</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="/auth/logout"><span class="glyphicon glyphicon-logout"></span> Logout</a></li> -->
             <!-- <li><a href="/auth/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
-            <li><a class="google-btn" class="glyphicon glyphicon-log-in" href="/auth/google">Google+</a></li>
-            <li><a href="/profile"><span class="glyphicon glyphicon-profile"></span> Profile</a></li>
+            <li><a class="google-btn menu-item" class="glyphicon glyphicon-log-in" href="/auth/google">Google+</a></li>
+            <li><a href="/profile" class="menu-item"><span class="glyphicon glyphicon-profile"></span> Profile</a></li>
           </ul>
         </div>
       </nav>
@@ -55,8 +55,8 @@
 
       <div class="jumbotron">
           <div class="container">
-             <h3>Your Own Budget Tracker</h3>
-             <p>Sign in to sync your data with the cloud. You can also use the tracker without signing up but your data will not be stored!</p>
+             <h3 class="opening">Your Own Budget Tracker</h3>
+             <p class="opening-text">Sign in to sync your data with the cloud. You can also use the tracker without signing up but your data will not be stored!</p>
           </div>
       </div>
 
@@ -64,16 +64,16 @@
       <div class="transactions container">
           <div class="row">
               <div class="col-sm-4 new-transaction">
-                  <h3 class="bg-dark text-center">NEW TRANSACTION</h3>
+                  <h3 class="bg-dark text-center column-heading">NEW TRANSACTION</h3>
                   <hr>
                   <form class="p-2" action="submit">
                       <div class="form-group">
-                        <label for="name">NAME</label>
-                        <input type="text" class="form-control" id="name" placeholder="firstname lastname">
+                        <label for="name" class="transaction-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Firstname Lastname">
                       </div>
 
                       <div class="form-group">
-                        <label for="transaction">TRANSACTION TYPE</label>
+                        <label for="transaction" class="transaction-label">Transaction Type</label>
                         <form action="submit" >
                             <select name="transaction" id="type" class="form-control">
                               <option class="opt" value="deposit">Deposit</option>
@@ -82,7 +82,7 @@
                           </form>
                       </div>
                       <div class="form-group">
-                        <label for="account">ACCOUNT TYPE</label>
+                        <label for="account" class="transaction-label">Account Type</label>
                         <form action="submit" >
                             <select name="account" id="from" class="form-control">
                               <option class="opt" value="checking">CHQ</option>
@@ -92,11 +92,11 @@
                           </form>
                       </div>
                       <div class="form-group">
-                        <label for="withdraw">AMOUNT</label>
+                        <label for="withdraw" class="transaction-label">Amount</label>
                         <input type="number" class="form-control" id="amount" placeholder="Enter amount">
                       </div>
                       <div class="form-group">
-                        <label for="withdraw">CATEGORY</label>
+                        <label for="withdraw" class="transaction-label">Category</label>
                         <form action="submit" >
                             <select name="category" id="category" class="form-control catWith">
                               <option class="opt" value="food">Food</option>
@@ -117,7 +117,7 @@
                         <!-- <input type="text" class="form-control" id="category" placeholder="Enter category"> -->
                       </div>
                       <div class="form-group">
-                        <label for="withdraw">NOTES</label>
+                        <label for="withdraw" class="transaction-label">Notes</label>
                         <input type="text" class="form-control" id="notes" placeholder="Any notes">
                       </div>
                       <button type="button" id="submit" class="btn btn-primary pull-left">SUBMIT</button>
@@ -125,7 +125,7 @@
               </div>
 
               <div class="col-sm-4 recent-transaction row">
-                  <h3 class="text-center">RECENT TRANSACTIONS</h3>
+                  <h3 class="text-center column-heading">RECENT TRANSACTIONS</h3>
                   <hr>
                   <!-- Button trigger modal -->
 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -214,7 +214,7 @@
               </div>
 
               <div class="col-sm-4 net-worth">
-                  <h3 class="text-center">NET WORTH</h3>
+                  <h3 class="text-center column-heading">NET WORTH</h3>
               </div>
           </div>
       </div>
