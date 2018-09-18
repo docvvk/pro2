@@ -4,6 +4,8 @@ var keys = require("./keys");
 var cookieSession = require("cookie-session");
 var db = require("../models/index");
 var User = require("../models/user");
+var env = require('dotenv').load();
+
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -23,9 +25,9 @@ passport.deserializeUser((id, done) => {
 passport.use(
     new GoogleStrategy({
     //options for the google strategy
-    clientID: keys.google.client_id,
-    clientSecret: keys.google.client_secret,
-    callbackURL: "/auth/google/redirect"
+    clientID: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_OAUTH_TEST_APP_CLIENT_SECRET,
+    callbackURL: "https://cryptic-badlands-31521.herokuapp.com/auth/google/redirect"
 }, (accessToken, refreshToken, profile, done) => {
     //passport callback function
     console.log("p cb f ")
@@ -55,3 +57,8 @@ passport.use(
     })
 })
 )
+
+
+
+
+
