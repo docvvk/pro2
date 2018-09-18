@@ -51,4 +51,38 @@ module.exports = function(app) {
       res.json(results);
     });
   });
+  //users
+  app.get("/api/all/:id", function(req, res) {
+    db.Transaction.findAll({
+      where: {
+        name: req.params.id
+      }
+    }).then(function(results) {
+      console.log(results);
+      res.json(results);
+    });
+  });
+
+  app.get("/api/with/:id", function(req, res) {
+    db.Transaction.findAll({
+      where: {
+        name: req.params.id,
+        type: "withdrawl"
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  app.get("/api/dep/:id", function(req, res) {
+    db.Transaction.findAll({
+      where: {
+        name: req.params.id,
+        type: "deposit"
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
 };
