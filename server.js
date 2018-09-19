@@ -6,9 +6,14 @@ var profileRoutes = require("./routes/profileRoutes");
 
 var passportSetup = require("./config/passport-setup");
 var passport = require("passport");
-var cookieSession = require('cookie-session');
+// var cookieSession = require('cookie-session');
 var keys = require("./config/keys");
 var env = require('dotenv').load();
+
+var session = require('express-session')
+
+
+
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -17,10 +22,13 @@ var PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
 //sey up session cookies
-app.use(cookieSession({
-  maxAge: 60000,
-  keys: [keys.session.cookieKey]
-}));
+// app.use(cookieSession({
+//   maxAge: 60000,
+//   keys: [keys.session.cookieKey]
+// }));
+
+
+app.use(session({ secret: 'secret', saveUninitialized: false, resave: false, cookie: { maxAge: 1000 } }));
 
 //initialize passport -- set up cookie-session
 app.use(passport.initialize());
