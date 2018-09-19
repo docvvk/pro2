@@ -89,3 +89,103 @@ a.dropdown-toggle.menu-item {
 #home #name, #from, #type, #amount, #category, #notes{
   border-color: #00a7a7
 }
+
+#transaction-page {
+  margin-bottom: 25px;
+}
+
+#transaction-page .navbar {
+  background-color: #00a7a7;
+}
+
+#transaction-page .menu-item {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: all .5s linear;
+  background-color: #00a7a7;
+}
+
+#transaction-page .menu-item:hover {
+  color: #000000;
+  background-color: #00a7a752;
+}
+
+#transaction-page .opening {
+  font-family: Verdana;
+  color: #696969;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+
+#transaction-page .opening-text {
+  font-family: monospace;
+  color: #696969;
+  letter-spacing: 3px;
+}
+
+#transaction-page .column-heading {
+  color: #00a7a7;
+  font-family: Verdana;
+  letter-spacing: 2px;
+}
+
+#transaction-page .transaction-label {
+  font-family: Verdana;
+  color: #808080;
+}
+
+#transaction-page #name, #from, #type, #amount, #category, #notes{
+  border-color: #00a7a7
+}
+
+#datachart-page {
+  margin-bottom: 25px;
+}
+
+#datachart-page .navbar {
+  background-color: #00a7a7;
+}
+
+#datachart-page .menu-item {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: all .5s linear;
+}
+
+#datachart-page .menu-item:hover {
+  color: #000000;
+  background-color: #00a7a752;
+}
+
+#datachart-page .opening {
+  font-family: Verdana;
+  color: #696969;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+
+#datachart-page .opening-text {
+  font-family: monospace;
+  color: #696969;
+  letter-spacing: 3px;
+}
+
+#datachart-page .column-heading {
+  color: #00a7a7;
+  font-family: Verdana;
+  letter-spacing: 2px;
+}
+
+#datachart-page .transaction-label {
+  font-family: Verdana;
+  color: #808080;
+}
+
+#datachart-page .byType, .byDate {
+  color: #696969;
+  font-family: Verdana;
+  letter-spacing: 2px;
+
+}
