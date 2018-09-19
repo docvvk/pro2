@@ -35,7 +35,7 @@
             <a class="navbar-brand menu-item" href="/">Budget Tracker</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active menu-item"><a href="#">Dashboard</a></li>
+            <li class="active"><a href="/" class="menu-item">Dashboard</a></li>
             <li class="dropdown"><a class="dropdown-toggle menu-item" data-toggle="dropdown" href="#">Options<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/dataChart">DataChart</a></li>
@@ -44,8 +44,8 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="google-btn" class="glyphicon glyphicon-log-in menu-item" href="/auth/google">Google+</a></li>
-            <li><a href="/profile"><span class="glyphicon glyphicon-profile menu-item"></span> Profile</a></li>
+            <li><a class="google-btn menu-item" class="glyphicon glyphicon-log-in menu-item" href="/auth/google">Google+</a></li>
+            <li><a href="/profile" class="menu-item"><span class="glyphicon glyphicon-profile menu-item"></span> Profile</a></li>
           </ul>
         </div>
       </nav>
@@ -53,24 +53,24 @@
 
       <div class="jumbotron">
           <div class="container">
-             <h3>Our Members Database</h3>
-             <p>Welcome to the Transactions Page showing our prestigious members and the transactions trend!</p>
+             <h3 class="opening">Our Members Database</h3>
+             <p class="opening-text">Welcome to the Transactions Page showing our prestigious members and the transactions trend!</p>
           </div>
       </div>
 
-
+    <div class="container">
       <table class="table table-hover table-dark " id="tansTable">
         <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">NAME</th>
-            <th scope="col">TRANSACTION</th>
-            <th scope="col">ACCOUNT</th>
-            <th scope="col">AMOUNT</th>
-            <th scope="col">CATEGORY</th>
-            <th scope="col">NOTES</th>
-            <th scope="col">CREATED AT</th>
-            <th scope="col">UPDATED AT</th>
+            <th class="column-heading" scope="col">ID</th>
+            <th class="column-heading" scope="col">NAME</th>
+            <th class="column-heading" scope="col">TRANSACTION</th>
+            <th class="column-heading" scope="col">ACCOUNT</th>
+            <th class="column-heading" scope="col">AMOUNT</th>
+            <th class="column-heading" scope="col">CATEGORY</th>
+            <th class="column-heading" scope="col">NOTES</th>
+            <th class="column-heading" scope="col">CREATED AT</th>
+            <th class="column-heading" scope="col">UPDATED AT</th>
 
           </tr>
         </thead>
@@ -94,9 +94,9 @@
           </tr>
         </tbody> -->
       </table>
+    </div>
 
 
       <script type="text/javascript" src="js/transactions.js"></script>
 
     </body>
-</html>
