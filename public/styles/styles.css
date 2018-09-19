@@ -44,6 +44,22 @@
   color: #fff;
   font-size: 20px;
   margin-top: 20px;
+  transition: all .5s linear;
+}
+
+#home .menu-item:hover {
+  color: #000000;
+  background-color: #00a7a752;
+}
+
+
+a.dropdown-toggle.menu-item {
+  background-color: #00a7a7;
+}
+
+.dropdown-menu {
+  width: 10px;
+  background-color: #eee;
 }
 
 #home .opening {
