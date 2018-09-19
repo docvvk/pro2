@@ -11,18 +11,18 @@ router.get("/login", function(req, res) {
 });
 
 //auth logout
-// router.get("/logout", function(req, res) {
-//   //handle with passport
-//   req.logout();
-//   req.session.destroy();
-//   res.redirect("/");
-// });
-
-router.get('/logout', function (req, res){
-  req.session.destroy(function (err) {
-    res.redirect('/'); //Inside a callback… bulletproof!
-  });
+router.get("/logout", function(req, res) {
+  //handle with passport
+  req.logout();
+  req.session.destroy();
+  res.redirect("/");
 });
+
+// router.get('/logout', function (req, res){
+//   req.session.destroy(function (err) {
+//     res.redirect('/'); //Inside a callback… bulletproof!
+//   });
+// });
 
 //auth with google+
 router.get(
