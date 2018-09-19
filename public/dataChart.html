@@ -12,7 +12,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -25,15 +25,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
   </head>
-  <body>
+  <body id="datachart-page">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-            <a class="navbar-brand" href="/">Budget Tracker</a>
+            <a class="navbar-brand menu-item" href="/">Budget Tracker</a>
             </div>
             <ul class="nav navbar-nav">
             <!-- <li class="active"><a href="index">Dashboard</a></li> -->
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Transactions<span class="caret"></span></a>
+            <li class="dropdown"><a class="dropdown-toggle menu-item" data-toggle="dropdown" href="#">Transactions<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                         <li><a href="/dataChart">Data Chart</a></li>
                         <li><a href="/transaction">Members</a></li>
@@ -41,16 +41,16 @@
             </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="google-btn" class="glyphicon glyphicon-log-in" href="/auth/google">Google+</a></li>
-                <li><a href="/profile"><span class="glyphicon glyphicon-profile"></span> Profile</a></li>
+                <li><a class="google-btn menu-item" class="glyphicon glyphicon-log-in" href="/auth/google">Google+</a></li>
+                <li><a href="/profile" class="menu-item"><span class="glyphicon glyphicon-profile"></span> Profile</a></li>
             </ul>
         </div>
     </nav>
-    
+
     <div class="jumbotron">
         <div class="container">
-            <h3>Welcome to the Visualizations Page</h3>
-            <p>The dynamic graphical representation of your expenses. </p>
+            <h3 class="opening">Your Own Budget Tracker</h3>
+            <p class="opening-text">Sign in to sync your data with the cloud. You can also use the tracker without signing up but your data will not be stored!</p>
         </div>
     </div>
     <select class="form-control byType" id="exampleFormControlSelect1">
@@ -62,7 +62,7 @@
         <option>Monthly</option>
         <option>Daily</option>
     </select>
-    
+
     <div id="chartArea">
         <div id="barChart" style="max-width: 500px; float: left;">
             <canvas id="myChart" width="400" height="400"></canvas>
@@ -72,7 +72,7 @@
         </div>
     </div>
 
-<!-- 
+<!--
     <div class="btn-group">
             <button type="button" class="btn btn2 btn-dark" data-chart="off">Id</button>
             <button type="button" class="btn btn2 btn-dark" data-chart="off">Name</button>
@@ -84,7 +84,7 @@
             <button type="button" class="btn btn8 btn-dark" data-chart="off">Created</button>
             <button type="button" class="btn btn9 btn-dark" data-chart="off">Lasted Update</button>
           </div>
-    
+
           <select class="form-control Transaction" id="exampleFormControlSelect1">
             <option>Deposit</option>
             <option>Withdrawal</option>
@@ -104,7 +104,7 @@
             <option>Health Expense</option>
             <option>Others</option>
           </select> -->
-    
+
   <script type="text/javascript" src="js/dataChart.js"></script>
   </body>
 </html>
