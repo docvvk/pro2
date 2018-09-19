@@ -25,7 +25,8 @@ router.get("/login", function(req, res) {
 // });
 
 router.get('/logout', function (req, res) { 
-  req.logOut(); // remove all session data req.session = null; 
+  req.logOut(); // remove all session data 
+  req.session = null; 
   res.redirect('/'); 
 });
 
