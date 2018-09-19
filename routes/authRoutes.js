@@ -19,7 +19,7 @@ var logout = function() {
   }
 }
 
-router.get("/logout", function(req, res) {
+router.get("/logout", logout, function(req, res) {
   //handle with passport
   console.log("logged out");
   res.redirect("/");
