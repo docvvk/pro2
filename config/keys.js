@@ -15,7 +15,7 @@
         javascript_origins: ["https://cryptic-badlands-31521.herokuapp.com"]
       },
       session: {
-        cookieKey: "budget-tracker-awesome"
+        cookieKey: "asdfghjklzxcvbnm"
       }
     };
   
