@@ -15,7 +15,7 @@ router.get("/logout", function(req, res) {
   //handle with passport
   req.logout();
   req.session.destroy();
-  res.redirect("/");
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 // router.get('/logout', function (req, res){
