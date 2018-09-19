@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 //sey up session cookies
 app.use(cookieSession({
-  maxAge: 24 * 60 * 60 * 1000,
+  maxAge: 60000,
   keys: [keys.session.cookieKey]
 }));
 
