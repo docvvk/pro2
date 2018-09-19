@@ -11,9 +11,17 @@ router.get("/login", function(req, res) {
 });
 
 //auth logout
+var logout = function() {
+  return function(req, res, next) {
+    req.logout();
+    delete req.session;
+    next();
+  }
+}
+
 router.get("/logout", function(req, res) {
   //handle with passport
-  req.logout();
+  console.log("logged out");
   res.redirect("/");
 });
 
